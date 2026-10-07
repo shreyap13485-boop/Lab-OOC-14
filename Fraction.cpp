@@ -34,6 +34,36 @@ int y=(b<0) ? -b: b;
 while(y!=0)
 {
 int temp=y;
+y = x % y;
+x = temp;
+}
+numerator /=x;
+denominato /=x;
+if(denominator<0)
+{
+numerator = -numerator;
+denominator = -denominator;
+}
+cout  << numerator <<"/" <<denominator <<endl;
+}
+};
+int main()
+{
+Fraction f1, f2, sum, difference;
+cout<<"Enter first fraction:"<<endl;
+f1.accept();
+cout<<"\nEnter second fraaction:" <<endl;
+f2.accept();
+sum=f1.add(f2);
+difference=f1.subtract(f2);
+cout<<"\nAddition=";
+sum.display()
+cout<<"Subtraction=";
+difference.display();
+return 0;
+}
+  
+
 
   
 
