@@ -11,18 +11,19 @@ public:
         this->inch = i;
     }
 
-    void operator-()
+    void operator+()
     {
-        feet--;
-        inch--;
+        feet=100;
+        inch=500;
         cout << "\nFeet & Inches(Decrement): " << feet << "'" << inch;
     }
-};
+ };
 
 int main()
 {
     Distance d1(8, 9);
-    // Use (-) unary operator by single operand
-    -d1;
+    cout<<d1.feet;
+    cout<<d1.inch;
+    +d1;
     return 0;
 }
